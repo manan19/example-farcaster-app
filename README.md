@@ -28,8 +28,8 @@ Welcome to the Sample Farcaster App! This README provides steps to get you start
     🔔 Notes: 
 
     - NEYNAR_API_KEY: If you need one, sign up on [https://neynar.com](https://neynar.com)
-    - APP_FID: Visit [https://lookup.fid.dev/?fname=YOUR_APP_FNAME](https://lookup.fid.dev/?fname=YOUR_APP_FNAME) to lookup of your APP_FID if needed.
-    - APP_MNEMONIC: Make sure the value is within single quotes
+    - FARCASTER_DEVELOPER_FID: Visit [https://lookup.fid.dev/?fname=YOUR_APP_FNAME](https://lookup.fid.dev/?fname=YOUR_APP_FNAME) to lookup of your APP_FID if needed.
+    - FARCASTER_DEVELOPER_MNEMONIC: Make sure the value is within single quotes
 
 4. **Start the App**:
     To start the Sample Farcaster app in development mode, run:

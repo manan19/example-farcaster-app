@@ -5,7 +5,6 @@ import express from 'express';
 import axios from 'axios';
 import path from 'path';
 import { mnemonicToAccount } from 'viem/accounts';
-import { async } from 'q';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -13,15 +12,15 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-if (typeof process.env.APP_MNEMONIC === 'undefined') {
-  throw new Error('APP_MNEMONIC is not defined');
+if (typeof process.env.FARCASTER_DEVELOPER_MNEMONIC === 'undefined') {
+  throw new Error('FARCASTER_DEVELOPER_MNEMONIC is not defined');
 }
-const APP_MNEMONIC = process.env.APP_MNEMONIC;
+const FARCASTER_DEVELOPER_MNEMONIC = process.env.FARCASTER_DEVELOPER_MNEMONIC;
 
-if (typeof process.env.APP_FID === 'undefined') {
-  throw new Error('APP_FID is not defined');
+if (typeof process.env.FARCASTER_DEVELOPER_FID === 'undefined') {
+  throw new Error('FARCASTER_DEVELOPER_FID is not defined');
 }
-const APP_FID = process.env.APP_FID;
+const FARCASTER_DEVELOPER_FID = process.env.FARCASTER_DEVELOPER_FID;
 
 // Serve static assets (React app) in production
 if (process.env.NODE_ENV === 'production') {
@@ -50,7 +49,7 @@ app.post('/api/signer', async (req, res) => {
       'https://api.neynar.com/v2/farcaster/signer/signed_key',
       {
         signer_uuid: createSignerResponse.data.signer_uuid,
-        app_fid: APP_FID,
+        app_fid: FARCASTER_DEVELOPER_FID,
         deadline,
         signature,
       },
@@ -133,7 +132,7 @@ const generate_signature = async function (public_key: string) {
     { name: 'deadline', type: 'uint256' },
   ];
 
-  const account = mnemonicToAccount(APP_MNEMONIC);
+  const account = mnemonicToAccount(FARCASTER_DEVELOPER_MNEMONIC);
 
   // Generates an expiration date for the signature
   // e.g. 1693927665
@@ -148,7 +147,7 @@ const generate_signature = async function (public_key: string) {
     },
     primaryType: 'SignedKeyRequest',
     message: {
-      requestFid: BigInt(APP_FID),
+      requestFid: BigInt(FARCASTER_DEVELOPER_FID),
       key: public_key,
       deadline: BigInt(deadline),
     },

@@ -25,10 +25,11 @@ Welcome to the Sample Farcaster App! This README provides steps to get you start
     ```bash
     open .env
     ```
-    > 🔔 Note: 
-        - If you need a NEYNAR_API_KEY, sign up on [https://neynar.com](https://neynar.com)
-        - Visit [https://lookup.fid.dev/?fname=YOUR_APP_FNAME](https://lookup.fid.dev/?fname=YOUR_APP_FNAME) for faster lookup of your APP_FID if needed.
-        - Make sure the APP_MNEMONIC value has single quotes
+    🔔 Notes: 
+
+    - NEYNAR_API_KEY: If you need one, sign up on [https://neynar.com](https://neynar.com)
+    - APP_FID: Visit [https://lookup.fid.dev/?fname=YOUR_APP_FNAME](https://lookup.fid.dev/?fname=YOUR_APP_FNAME) to lookup of your APP_FID if needed.
+    - APP_MNEMONIC: Make sure the value is within single quotes
 
 4. **Start the App**:
     To start the Sample Farcaster app in development mode, run:

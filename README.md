@@ -28,8 +28,9 @@ Welcome to the Sample Farcaster App! This README provides steps to get you start
     🔔 Notes: 
 
     - NEYNAR_API_KEY: If you need one, sign up on [https://neynar.com](https://neynar.com)
-    - FARCASTER_DEVELOPER_FID: Visit [https://lookup.fid.dev/?fname=YOUR_APP_FNAME](https://lookup.fid.dev/?fname=YOUR_APP_FNAME) to lookup of your APP_FID if needed.
+    - FARCASTER_DEVELOPER_FID: Visit [https://lookup.fid.dev/?fname=YOUR_APP_FNAME](https://lookup.fid.dev/?fname=YOUR_APP_FNAME) to lookup of your FARCASTER_DEVELOPER_FID if needed.
     - FARCASTER_DEVELOPER_MNEMONIC: Make sure the value is within single quotes
+    - A farcaster developer account is the same as any farcaster account. You can use your personal account as a farcaster developer account e.g. https://warpcast.com/manan or your company / branded developer account like https://warpcast.com/neynar
 
 4. **Start the App**:
     To start the Sample Farcaster app in development mode, run:

@@ -26,7 +26,7 @@ Welcome to the Sample Farcaster App! This README provides steps to get you start
     open .env
     ```
 
-    > 🔔 Note: Visit [https://lookup.fid.dev/?fname=neynar](https://lookup.fid.dev/?fname=neynar) for some configurations if needed.
+    > 🔔 Note: Visit [https://lookup.fid.dev/?fname=YOUR_APP_FNAME](https://lookup.fid.dev/?fname=YOUR_APP_FNAME) for faster lookup of your APP_FID if needed.
 
 4. **Start the App**:
     To start the Farcaster app in development mode, run:
